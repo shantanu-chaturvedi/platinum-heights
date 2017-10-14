@@ -1,0 +1,169 @@
+@page {
+    size: auto;   /* auto is the current printer page size */
+    margin: 0mm;  /* this affects the margin in the printer settings */
+   /* margin-top: 50mm*/; 
+}
+
+/*@page {
+  @top-center {
+    content: element(pageHeader);
+  }
+
+  @bottom-center {
+    content: element(pageFooter);
+  }
+}*/
+
+#pageHeader{
+  display: block;
+  position: fixed;
+  margin: 5mm;
+  margin-bottom: 35mm;
+}
+
+#pageFooter{
+  margin: 5mm;
+  margin-top: 40mm;
+  display: block;
+  position: fixed; 
+  page-break-before: always;
+  width:100%;
+}
+
+.leftFooter {
+  text-align: left !important;
+}
+
+/*table {
+  page-break-before: always;
+}*/
+
+body {
+  margin: 5mm 0;
+  font: 16pt Georgia, "Times New Roman", Times, serif;
+  line-height: 1.3;
+}
+
+
+div.divHeaderPrint{
+  position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    float:left;
+    border-bottom: 1px dotted;
+    padding-bottom: 20px;
+}
+
+div.divFooterPrnt{
+  position: fixed;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    border-top: 1px dotted;
+    padding-top: 20px;
+    font-size: 20px;
+    page-break-before: always;
+     display: block
+}
+
+#sjfb-sample {
+  /*margin-top: 30mm;*/
+  margin-bottom: 30mm;
+  max-width: 700px !important;
+  max-height: 100px;
+}
+
+form {
+  width:100%;
+   page-break-inside:auto;
+}
+
+input[type=text] {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+#sjfb-sample input[type="text"], #sjfb-sample textarea {
+  max-width: 100% !important;
+}
+
+#sjfb-sample textarea {
+  min-height : 75px;
+}
+
+div.leftFooter{
+  width:60%;
+  float: left;
+  text-align: center;
+}
+
+div.rightFooter{
+  width:40%;
+  float: right;
+  text-align: center;
+}
+
+div.divHeaderPrint div.col-md-6:nth-child(1){
+  float: left;
+  font-size: 20px;
+  width: 50%;
+}
+
+div.divHeaderPrint div.col-md-6:nth-child(2){
+  float: right;
+  width: 50%;
+}
+
+div.divHeaderPrint div.col-md-6 table tr td:first-child{
+  border-right: 3px dotted #2574ab;
+  padding-right: 10px;
+}
+
+div.divHeaderPrint div.col-md-6 table tr td:last-child{
+  padding-left: 10px;
+}
+
+div.divHeaderPrint div.col-md-6 table tr td{
+  font-size: 20px;
+}
+
+div.divHeaderPrintr:after {
+  margin-bottom: 50mm;
+}
+
+h4,label {
+  font-size: 20px;
+}
+
+
+.headerpanel {
+  display: none;
+}
+
+
+/*header:after {
+content: "www.smashing-winery.com";
+}*/
+
+.panel:nth-child(1),.panel:nth-child(3),.panel:nth-child(4),.panel:nth-child(5) {
+    display: none;
+}
+
+.dash-right {
+    display: none;
+}
+
+.panel:nth-child(2) p, .panel:nth-child(2) .panel-heading a {
+    display: none;
+}
+
+button[type=submit]{
+  display: none;
+}
